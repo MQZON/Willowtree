@@ -21,6 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSingleton(ModBlocks.WILLOW_LEAVES, TexturedModel.LEAVES);
 
+//        blockStateModelGenerator.registerCrop(ModBlocks.WILLOW_SHOOTS, Property<Integer> , 1);
+
         blockStateModelGenerator.registerTintedItemModel(ModBlocks.WILLOW_LEAVES, Identifier.of(Willowtree.MOD_ID, "block/willow_leaves"), new ConstantTintSource(-12012264));
 
         blockStateModelGenerator.registerLog(ModBlocks.WILLOW_LOG)

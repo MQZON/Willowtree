@@ -154,6 +154,10 @@ public class ModBlocks {
 //            .sign(MAPLE_STANDING_SIGN, MAPLE_WALL_SIGN)
 //            .group("wooden").unlockCriterionName("has_planks").build();
 //
+
+    public static final Block WILLOW_SHOOTS = registerBlock("willow_shoots",
+            new SugarCaneBlock(AbstractBlock.Settings.copy(Blocks.SUGAR_CANE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_shoots")))));
 //    public static final Block SPILE = registerBlock("spile",
 //            new SpileBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).requiresTool()
 //                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "spile")))));
@@ -189,6 +193,7 @@ public class ModBlocks {
             entries.add(ModBlocks.STRIPPED_WILLOW_LOG);
             entries.add(ModBlocks.STRIPPED_WILLOW_WOOD);
             entries.add(ModBlocks.WILLOW_LEAVES);
+            entries.add(ModBlocks.WILLOW_SHOOTS);
         });
 
 //        Mapletree.LOGGER.info("Registering Mod Blocks for " +Mapletree.MOD_ID);
