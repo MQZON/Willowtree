@@ -26,6 +26,7 @@ import net.minecraft.world.biome.Biome;
 //import net.mqzon.mapletree.util.ModCauldronBehaviors;
 //import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
 import net.mqzon.willowtree.Willowtree;
+import net.mqzon.willowtree.block.custom.BasketBlock;
 
 public class ModBlocks {
 
@@ -155,6 +156,11 @@ public class ModBlocks {
 //            .group("wooden").unlockCriterionName("has_planks").build();
 //
 
+    public static final Block BASKET = registerBlock("basket",
+            new BasketBlock(AbstractBlock.Settings.copy(Blocks.LOOM)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "basket")))) {
+            });
+
     public static final Block WILLOW_SHOOTS = registerBlock("willow_shoots",
             new SugarCaneBlock(AbstractBlock.Settings.copy(Blocks.SUGAR_CANE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_shoots")))));
@@ -194,6 +200,11 @@ public class ModBlocks {
             entries.add(ModBlocks.STRIPPED_WILLOW_WOOD);
             entries.add(ModBlocks.WILLOW_LEAVES);
             entries.add(ModBlocks.WILLOW_SHOOTS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+
+            entries.add(ModBlocks.BASKET);
         });
 
 //        Mapletree.LOGGER.info("Registering Mod Blocks for " +Mapletree.MOD_ID);
