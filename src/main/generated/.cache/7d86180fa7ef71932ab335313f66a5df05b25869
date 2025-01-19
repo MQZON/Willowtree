@@ -1,0 +1,12 @@
+// 1.21.4	-999999999-01-01T00:00:00	Willowtree/Tags for minecraft:block
+b403d1ba3105d413a86418a1da7706eff656043b data/minecraft/tags/block/completes_find_tree_tutorial.json
+f318abc2e11da161516932babf9a7185dfc18756 data/minecraft/tags/block/flower_pots.json
+6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/leaves.json
+1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/block/logs.json
+1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/block/logs_that_burn.json
+1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/block/mineable/axe.json
+6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/mineable/hoe.json
+31f3e0967ba5a4768dcf9f1d373a92c133fb3049 data/minecraft/tags/block/overworld_natural_logs.json
+6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/replaceable_by_trees.json
+aaf6e48e4ed0be7411eca632ceffa86fe45c6b97 data/willowtree/tags/block/willow_leaves.json
+18e9121cc0911a9fc06c005f5aa34a9e37a31f0a data/willowtree/tags/block/willow_logs.json

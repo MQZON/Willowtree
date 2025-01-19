@@ -1,0 +1,8 @@
+// 1.21.4	-999999999-01-01T00:00:00	Willowtree/Block Loot Tables
+3ea93991d1836cd6fc64ed8c529c7be0c6cbbc75 data/willowtree/loot_table/blocks/potted_willow_sapling.json
+7e15d5a3e50dd244150563a39529471334846632 data/willowtree/loot_table/blocks/stripped_willow_log.json
+6f48de860ed4ae5509576bf65c048e7c073332cc data/willowtree/loot_table/blocks/stripped_willow_wood.json
+00abb067250c620f5ed41df0bd5065966898bb71 data/willowtree/loot_table/blocks/willow_leaves.json
+15ce13c00e1811b1beb5c0fdce9663c73bf731a6 data/willowtree/loot_table/blocks/willow_log.json
+f768cd1a70104693924f3fdaf5b3ea1b87c9e08d data/willowtree/loot_table/blocks/willow_sapling.json
+93219944fe10a788dc917d6c3671920e60359c03 data/willowtree/loot_table/blocks/willow_wood.json

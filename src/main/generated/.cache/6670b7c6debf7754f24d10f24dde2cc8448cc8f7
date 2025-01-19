@@ -1,0 +1,8 @@
+// 1.21.4	-999999999-01-01T00:00:00	Willowtree/Tags for minecraft:item
+9d7d264d143d069fd9fd380868c7df4d6592d769 data/minecraft/tags/item/completes_find_tree_tutorial.json
+6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/item/leaves.json
+1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/item/logs.json
+1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/item/logs_that_burn.json
+6afdbdcc61a77acf614ca413639fa0ebbdabd4f6 data/minecraft/tags/item/saplings.json
+aaf6e48e4ed0be7411eca632ceffa86fe45c6b97 data/willowtree/tags/item/willow_leaves.json
+18e9121cc0911a9fc06c005f5aa34a9e37a31f0a data/willowtree/tags/item/willow_logs.json

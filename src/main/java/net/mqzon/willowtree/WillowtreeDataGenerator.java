@@ -4,8 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.mqzon.willowtree.datagen.ModModelProvider;
-import net.mqzon.willowtree.datagen.ModRegistryDataGenerator;
+import net.mqzon.willowtree.datagen.*;
 import net.mqzon.willowtree.world.ModConfiguredFeatures;
 import net.mqzon.willowtree.world.ModPlacedFeatures;
 
@@ -14,10 +13,12 @@ public class WillowtreeDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModRegistryDataGenerator::new);
-
-	}
+		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);	}
 
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
