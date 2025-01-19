@@ -12,8 +12,19 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.mqzon.willowtree.Willowtree;
+import net.mqzon.willowtree.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
+    public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
+            new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_sapling")))
+                    .mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block POTTED_WILLOW_SAPLING = registerBlockWithoutBlockItem("potted_willow_sapling",
+            new FlowerPotBlock(WILLOW_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "potted_willow_sapling")))
+            ));
+
     public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
         new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
                 .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_leaves")))));
@@ -51,6 +62,7 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.WILLOW_SAPLING);
             entries.add(ModBlocks.WILLOW_LOG);
             entries.add(ModBlocks.WILLOW_WOOD);
             entries.add(ModBlocks.STRIPPED_WILLOW_LOG);
