@@ -25,9 +25,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
 
-//            public static final Ingredient WILLOW_PLANKS_INGREDIENT = Ingredient.ofItems(ModBlocks.WILLOW_PLANKS.asItem());
-//            public static final String HAS_WILLOW_PLANKS = hasItem(ModBlocks.WILLOW_PLANKS);
-//            public final AdvancementCriterion<?> HAS_WILLOW_PLANKS_CRITERION = conditionsFromItem(ModBlocks.WILLOW_PLANKS);
+            public static final Ingredient WILLOW_PLANKS_INGREDIENT = Ingredient.ofItems(ModBlocks.WILLOW_PLANKS.asItem());
+            public static final String HAS_WILLOW_PLANKS = hasItem(ModBlocks.WILLOW_PLANKS);
+            public final AdvancementCriterion<?> HAS_WILLOW_PLANKS_CRITERION = conditionsFromItem(ModBlocks.WILLOW_PLANKS);
             public static final String HAS_WILLOW_LEAVES = hasItem(ModBlocks.WILLOW_LEAVES);
             public final AdvancementCriterion<?> HAS_WILLOW_LEAVES_CRITERION = conditionsFromItem(ModBlocks.WILLOW_LEAVES);
 //            public static final String RED_HAS_WILLOW_LEAVES = hasItem(ModBlocks.RED_WILLOW_LEAVES);
@@ -38,15 +38,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBarkBlockRecipe(ModBlocks.WILLOW_WOOD, ModBlocks.WILLOW_LOG);
                 offerBarkBlockRecipe(ModBlocks.STRIPPED_WILLOW_WOOD, ModBlocks.STRIPPED_WILLOW_LOG);
 
-//                offerPlanksRecipe(ModBlocks.WILLOW_PLANKS, ModTags.Items.WILLOW_LOGS, 4);
-//                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_SLAB, ModBlocks.WILLOW_PLANKS);
-//                createStairsRecipe(ModBlocks.WILLOW_STAIRS, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                createFenceRecipe(ModBlocks.WILLOW_FENCE, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                createFenceGateRecipe(ModBlocks.WILLOW_FENCE_GATE, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                createDoorRecipe(ModBlocks.WILLOW_DOOR, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                createTrapdoorRecipe(ModBlocks.WILLOW_TRAPDOOR, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                offerPressurePlateRecipe(ModBlocks.WILLOW_PRESSURE_PLATE, ModBlocks.WILLOW_PLANKS);
-//                offerShapelessRecipe(ModBlocks.WILLOW_BUTTON, ModBlocks.WILLOW_PLANKS, "wooden_button", 1);
+                offerPlanksRecipe(ModBlocks.WILLOW_PLANKS, ModTags.Items.WILLOW_LOGS, 4);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_SLAB, ModBlocks.WILLOW_PLANKS);
+                createStairsRecipe(ModBlocks.WILLOW_STAIRS, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                createFenceRecipe(ModBlocks.WILLOW_FENCE, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                createFenceGateRecipe(ModBlocks.WILLOW_FENCE_GATE, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                createDoorRecipe(ModBlocks.WILLOW_DOOR, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                createTrapdoorRecipe(ModBlocks.WILLOW_TRAPDOOR, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                offerPressurePlateRecipe(ModBlocks.WILLOW_PRESSURE_PLATE, ModBlocks.WILLOW_PLANKS);
+                offerShapelessRecipe(ModBlocks.WILLOW_BUTTON, ModBlocks.WILLOW_PLANKS, "wooden_button", 1);
 //                createSignRecipe(ModItems.WILLOW_SIGN, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
 //                offerHangingSignRecipe(ModItems.WILLOW_HANGING_SIGN, ModBlocks.STRIPPED_WILLOW_LOG);
 //                offerBoatRecipe(ModBoats.WILLOW_BOAT, ModBlocks.WILLOW_PLANKS);

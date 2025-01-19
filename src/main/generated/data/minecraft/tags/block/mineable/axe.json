@@ -1,5 +1,14 @@
 {
   "values": [
-    "#willowtree:willow_logs"
+    "#willowtree:willow_logs",
+    "willowtree:willow_planks",
+    "willowtree:willow_slab",
+    "willowtree:willow_stairs",
+    "willowtree:willow_fence",
+    "willowtree:willow_fence_gate",
+    "willowtree:willow_door",
+    "willowtree:willow_trapdoor",
+    "willowtree:willow_pressure_plate",
+    "willowtree:willow_button"
   ]
 }

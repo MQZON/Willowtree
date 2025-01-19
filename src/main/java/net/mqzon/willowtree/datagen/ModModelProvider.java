@@ -30,6 +30,17 @@ public class ModModelProvider extends FabricModelProvider {
                 .log(ModBlocks.WILLOW_LOG).wood(ModBlocks.WILLOW_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_WILLOW_LOG)
                 .log(ModBlocks.STRIPPED_WILLOW_LOG).wood(ModBlocks.STRIPPED_WILLOW_WOOD);
+
+        BlockStateModelGenerator.BlockTexturePool willowPool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
+        willowPool.slab(ModBlocks.WILLOW_SLAB);
+        willowPool.stairs(ModBlocks.WILLOW_STAIRS);
+        willowPool.fence(ModBlocks.WILLOW_FENCE);
+        willowPool.fenceGate(ModBlocks.WILLOW_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.WILLOW_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.WILLOW_TRAPDOOR);
+        willowPool.pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE);
+        willowPool.button(ModBlocks.WILLOW_BUTTON);
     }
 
     @Override

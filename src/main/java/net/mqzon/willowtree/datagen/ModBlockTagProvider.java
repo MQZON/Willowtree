@@ -40,24 +40,24 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LOGS).addTag(ModTags.Blocks.WILLOW_LOGS);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.WILLOW_LOGS);
 
-//        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.WILLOW_PLANKS);
+        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.WILLOW_PLANKS);
 
-//        getOrCreateTagBuilder(BlockTags.SLABS).add(ModBlocks.WILLOW_SLAB);
-//        getOrCreateTagBuilder(BlockTags.STAIRS).add(ModBlocks.WILLOW_STAIRS);
-//        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.WILLOW_FENCE);
-//        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.WILLOW_FENCE_GATE);
-//        getOrCreateTagBuilder(BlockTags.DOORS).add(ModBlocks.WILLOW_DOOR);
-//        getOrCreateTagBuilder(BlockTags.TRAPDOORS).add(ModBlocks.WILLOW_TRAPDOOR);
-//        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE);
-//        getOrCreateTagBuilder(BlockTags.BUTTONS).add(ModBlocks.WILLOW_BUTTON);
+        getOrCreateTagBuilder(BlockTags.SLABS).add(ModBlocks.WILLOW_SLAB);
+        getOrCreateTagBuilder(BlockTags.STAIRS).add(ModBlocks.WILLOW_STAIRS);
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.WILLOW_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.WILLOW_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.DOORS).add(ModBlocks.WILLOW_DOOR);
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS).add(ModBlocks.WILLOW_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.BUTTONS).add(ModBlocks.WILLOW_BUTTON);
 
-//        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(ModBlocks.WILLOW_SLAB);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.WILLOW_STAIRS);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.WILLOW_FENCE);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.WILLOW_DOOR);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.WILLOW_TRAPDOOR);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE);
-//        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.WILLOW_BUTTON);
+        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(ModBlocks.WILLOW_SLAB);
+        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.WILLOW_STAIRS);
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.WILLOW_FENCE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.WILLOW_DOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.WILLOW_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.WILLOW_BUTTON);
 
 //        getOrCreateTagBuilder(ModTags.Blocks.WILLOW_SIGNS)
 //                .add(ModBlocks.WILLOW_STANDING_SIGN)
@@ -76,16 +76,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).addTag(ModTags.Blocks.WILLOW_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
-                .addTag(ModTags.Blocks.WILLOW_LOGS);
-//                .add(ModBlocks.WILLOW_PLANKS)
-//                .add(ModBlocks.WILLOW_SLAB)
-//                .add(ModBlocks.WILLOW_STAIRS)
-//                .add(ModBlocks.WILLOW_FENCE)
-//                .add(ModBlocks.WILLOW_FENCE_GATE)
-//                .add(ModBlocks.WILLOW_DOOR)
-//                .add(ModBlocks.WILLOW_TRAPDOOR)
-//                .add(ModBlocks.WILLOW_PRESSURE_PLATE)
-//                .add(ModBlocks.WILLOW_BUTTON)
+                .addTag(ModTags.Blocks.WILLOW_LOGS)
+                .add(ModBlocks.WILLOW_PLANKS)
+                .add(ModBlocks.WILLOW_SLAB)
+                .add(ModBlocks.WILLOW_STAIRS)
+                .add(ModBlocks.WILLOW_FENCE)
+                .add(ModBlocks.WILLOW_FENCE_GATE)
+                .add(ModBlocks.WILLOW_DOOR)
+                .add(ModBlocks.WILLOW_TRAPDOOR)
+                .add(ModBlocks.WILLOW_PRESSURE_PLATE)
+                .add(ModBlocks.WILLOW_BUTTON);
 //                .addTag(ModTags.Blocks.WILLOW_SIGNS);
     }
 }

@@ -1,0 +1,31 @@
+{
+  "itemgroup.willowtree.willow_group": "Willowtree",
+
+  "item.willowtree.willow_sapling": "Willow Sapling",
+  "item.willowtree.potted_willow_sapling": "Potted Willow Sapling",
+  "item.willowtree.willow_leaves": "Willow Leaves",
+  "item.willowtree.willow_leaf_pile": "Willow Leaf Pile",
+
+
+  "item.willowtree.willow_log": "Willow Log",
+  "item.willowtree.willow_wood": "Willow Wood",
+  "item.willowtree.stripped_willow_log": "Stripped Willow Log",
+  "item.willowtree.stripped_willow_wood": "Stripped Willow Wood",
+
+  "item.willowtree.willow_planks": "Willow Planks",
+
+  "item.willowtree.willow_slab": "Willow Slab",
+  "item.willowtree.willow_stairs": "Willow Stairs",
+  "item.willowtree.willow_fence": "Willow Fence",
+  "item.willowtree.willow_fence_gate": "Willow Fence Gate",
+  "item.willowtree.willow_door": "Willow Door",
+  "item.willowtree.willow_trapdoor": "Willow Trapdoor",
+  "item.willowtree.willow_pressure_plate": "Willow Pressure Plate",
+  "item.willowtree.willow_button": "Willow Button",
+
+  "item.willowtree.willow_sign": "Willow Sign",
+  "item.willowtree.willow_hanging_sign": "Willow Hanging Sign",
+
+  "item.willowtree.willow_boat": "Willow Boat",
+  "item.willowtree.willow_chest_boat": "Willow Boat with Chest"
+}
