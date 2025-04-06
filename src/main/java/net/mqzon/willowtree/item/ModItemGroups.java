@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mqzon.willowtree.Willowtree;
 import net.mqzon.willowtree.block.ModBlocks;
-//import net.mqzon.willowtree.boat.ModBoats;
+import net.mqzon.willowtree.boat.ModBoats;
 
 public class ModItemGroups {
     public static final ItemGroup WILLOW_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -37,8 +37,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_BUTTON);
 //                        entries.add(ModItems.WILLOW_SIGN);
 //                        entries.add(ModItems.WILLOW_HANGING_SIGN);
-//                        entries.add(ModBoats.WILLOW_BOAT);
-//                        entries.add(ModBoats.WILLOW_CHEST_BOAT);
+                        entries.add(ModBoats.WILLOW_BOAT);
+                        entries.add(ModBoats.WILLOW_CHEST_BOAT);
                     }).build());
 
     public static void registerItemGroups() {
@@ -79,11 +79,9 @@ public class ModItemGroups {
 //            entries.add(ModItems.WILLOW_HANGING_SIGN);
 //        });
 
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-//            entries.add(ModBoats.WILLOW_BOAT);
-//            entries.add(ModBoats.WILLOW_CHEST_BOAT);
-//        });
-
-
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(ModBoats.WILLOW_BOAT);
+            entries.add(ModBoats.WILLOW_CHEST_BOAT);
+        });
     }
 }

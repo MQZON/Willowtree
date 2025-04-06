@@ -27,5 +27,7 @@
   "item.willowtree.willow_hanging_sign": "Willow Hanging Sign",
 
   "item.willowtree.willow_boat": "Willow Boat",
-  "item.willowtree.willow_chest_boat": "Willow Boat with Chest"
+  "item.willowtree.willow_chest_boat": "Willow Boat with Chest",
+
+  "entity.willowtree.willow_chest_boat": "Willow Boat with Chest"
 }

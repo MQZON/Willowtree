@@ -18,6 +18,9 @@
 		"main": [
           "net.mqzon.willowtree.Willowtree"
 		],
+		"terraform-boat-dfu": [
+			"net.mqzon.willowtree.util.WillowBoatDfu"
+		],
 		"client": [
 			"net.mqzon.willowtree.WillowtreeClient"
 		],

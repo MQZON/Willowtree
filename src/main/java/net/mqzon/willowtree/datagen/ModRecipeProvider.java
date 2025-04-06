@@ -10,7 +10,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.willowtree.block.ModBlocks;
-//import net.mqzon.willowtree.boat.ModBoats;
+import net.mqzon.willowtree.boat.ModBoats;
 //import net.mqzon.willowtree.item.ModItems;
 import net.mqzon.willowtree.util.ModTags;
 
@@ -30,8 +30,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public final AdvancementCriterion<?> HAS_WILLOW_PLANKS_CRITERION = conditionsFromItem(ModBlocks.WILLOW_PLANKS);
             public static final String HAS_WILLOW_LEAVES = hasItem(ModBlocks.WILLOW_LEAVES);
             public final AdvancementCriterion<?> HAS_WILLOW_LEAVES_CRITERION = conditionsFromItem(ModBlocks.WILLOW_LEAVES);
-//            public static final String RED_HAS_WILLOW_LEAVES = hasItem(ModBlocks.RED_WILLOW_LEAVES);
-//            public final AdvancementCriterion<?> RED_HAS_WILLOW_LEAVES_CRITERION = conditionsFromItem(ModBlocks.RED_WILLOW_LEAVES);
 
             @Override
             public void generate() {
@@ -49,8 +47,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerShapelessRecipe(ModBlocks.WILLOW_BUTTON, ModBlocks.WILLOW_PLANKS, "wooden_button", 1);
 //                createSignRecipe(ModItems.WILLOW_SIGN, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
 //                offerHangingSignRecipe(ModItems.WILLOW_HANGING_SIGN, ModBlocks.STRIPPED_WILLOW_LOG);
-//                offerBoatRecipe(ModBoats.WILLOW_BOAT, ModBlocks.WILLOW_PLANKS);
-//                offerChestBoatRecipe(ModBoats.WILLOW_CHEST_BOAT, ModBoats.WILLOW_BOAT);
+                offerBoatRecipe(ModBoats.WILLOW_BOAT, ModBlocks.WILLOW_PLANKS);
+                offerChestBoatRecipe(ModBoats.WILLOW_CHEST_BOAT, ModBoats.WILLOW_BOAT);
              }
         };
     }

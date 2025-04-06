@@ -10,6 +10,7 @@ import net.minecraft.client.render.item.tint.ConstantTintSource;
 import net.minecraft.util.Identifier;
 import net.mqzon.willowtree.Willowtree;
 import net.mqzon.willowtree.block.ModBlocks;
+import net.mqzon.willowtree.boat.ModBoats;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -46,6 +47,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModBlocks.WILLOW_SAPLING.asItem(), Models.GENERATED);
-
+        itemModelGenerator.register(ModBoats.WILLOW_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModBoats.WILLOW_CHEST_BOAT, Models.GENERATED);
     }
 }
