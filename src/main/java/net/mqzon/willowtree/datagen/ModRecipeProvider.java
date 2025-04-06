@@ -5,13 +5,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.willowtree.block.ModBlocks;
 import net.mqzon.willowtree.boat.ModBoats;
-//import net.mqzon.willowtree.item.ModItems;
 import net.mqzon.willowtree.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -28,8 +26,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public static final Ingredient WILLOW_PLANKS_INGREDIENT = Ingredient.ofItems(ModBlocks.WILLOW_PLANKS.asItem());
             public static final String HAS_WILLOW_PLANKS = hasItem(ModBlocks.WILLOW_PLANKS);
             public final AdvancementCriterion<?> HAS_WILLOW_PLANKS_CRITERION = conditionsFromItem(ModBlocks.WILLOW_PLANKS);
-            public static final String HAS_WILLOW_LEAVES = hasItem(ModBlocks.WILLOW_LEAVES);
-            public final AdvancementCriterion<?> HAS_WILLOW_LEAVES_CRITERION = conditionsFromItem(ModBlocks.WILLOW_LEAVES);
 
             @Override
             public void generate() {
