@@ -36,61 +36,61 @@ public class ModBlocks {
                 .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_leaves")))));
 
     public static final Block WILLOW_LOG = registerBlock("willow_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN)
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.TERRACOTTA_LIME)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_log")))
             ));
     public static final Block WILLOW_WOOD = registerBlock("willow_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.OAK_TAN)
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.TERRACOTTA_LIME)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_wood")))
             ));
     public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OAK_TAN)
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.GREEN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "stripped_willow_log")))
             ));
     public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OAK_TAN)
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.GREEN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "stripped_willow_wood")))
             ));
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_planks")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE)));
+                    .mapColor(MapColor.GREEN)));
 
     public static final Block WILLOW_SLAB = registerBlock("willow_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_WHITE)
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.GREEN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_slab")))
             ));
     public static final Block WILLOW_STAIRS = registerBlock("willow_stairs",
             new StairsBlock(WILLOW_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_stairs")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .mapColor(MapColor.GREEN)
             ));
     public static final Block WILLOW_FENCE = registerBlock("willow_fence",
-            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.TERRACOTTA_WHITE)
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.GREEN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_fence")))
             ));
     public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate",
             new FenceGateBlock(WoodType.OAK,
-                    AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.TERRACOTTA_WHITE)
+                    AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.GREEN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_fence_gate")))
             ));
     public static final Block WILLOW_DOOR = registerBlock("willow_door",
             new DoorBlock(WoodType.OAK.setType(),
-                    AbstractBlock.Settings.copy(Blocks.OAK_DOOR).mapColor(MapColor.TERRACOTTA_WHITE)
+                    AbstractBlock.Settings.copy(Blocks.OAK_DOOR).mapColor(MapColor.GREEN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_door")))
             ));
     public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor",
             new TrapdoorBlock(WoodType.OAK.setType(), AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_trapdoor")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE)));
+                    .mapColor(MapColor.GREEN)));
     public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate",
             new PressurePlateBlock(WoodType.OAK.setType(), AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_pressure_plate")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE)));
+                    .mapColor(MapColor.GREEN)));
     public static final Block WILLOW_BUTTON = registerBlock("willow_button",
             new ButtonBlock(WoodType.OAK.setType(), 15, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_button")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE)));
+                    .mapColor(MapColor.GREEN)));
 
     public static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(Willowtree.MOD_ID, "entity/signs/willow");
     public static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(Willowtree.MOD_ID, "entity/signs/hanging/willow");
@@ -99,19 +99,19 @@ public class ModBlocks {
     public static final Block WILLOW_STANDING_SIGN = registerBlock("willow_standing_sign",
             new TerraformSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_standing_sign")))
-                    .mapColor(MapColor.TERRACOTTA_GREEN)));
+                    .mapColor(MapColor.GREEN)));
     public static final Block WILLOW_WALL_SIGN = registerBlock("willow_wall_sign",
             new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_wall_sign")))
-                    .mapColor(MapColor.TERRACOTTA_GREEN)));
+                    .mapColor(MapColor.GREEN)));
     public static final Block WILLOW_HANGING_SIGN = registerBlockWithoutBlockItem("willow_hanging_sign",
             new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_GUI_SIGN_TEXTURE,
-                    AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_GREEN)
+                    AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.GREEN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_hanging_sign")))
             ));
     public static final Block WILLOW_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("willow_wall_hanging_sign",
             new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_GUI_SIGN_TEXTURE,
-                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_GREEN)
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.GREEN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_wall_hanging_sign")))
             ));
 
