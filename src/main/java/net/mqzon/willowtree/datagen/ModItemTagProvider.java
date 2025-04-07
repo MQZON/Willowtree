@@ -5,8 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.mqzon.willowtree.block.ModBlocks;
-//import net.mqzon.willowtree.boat.ModBoats;
-//import net.mqzon.willowtree.item.ModItems;
+import net.mqzon.willowtree.boat.ModBoats;
 import net.mqzon.willowtree.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -60,8 +59,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 //        getOrCreateTagBuilder(ItemTags.SIGNS).add(ModItems.WILLOW_SIGN);
 
-//        getOrCreateTagBuilder(ItemTags.BOATS).add(ModBoats.WILLOW_BOAT);
-//        getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModBoats.WILLOW_CHEST_BOAT);
+        getOrCreateTagBuilder(ItemTags.BOATS).add(ModBoats.WILLOW_BOAT);
+        getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModBoats.WILLOW_CHEST_BOAT);
 
     }
 }
