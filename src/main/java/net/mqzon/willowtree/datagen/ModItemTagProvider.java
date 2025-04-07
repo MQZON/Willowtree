@@ -18,10 +18,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-//        getOrCreateTagBuilder(ModTags.Items.WILLOW_SAPLINGS)
-//                .add(ModBlocks.WILLOW_SAPLING.asItem())
-//                .add(ModBlocks.RED_WILLOW_SAPLING.asItem());
-
         getOrCreateTagBuilder(ModTags.Items.WILLOW_LEAVES).add(ModBlocks.WILLOW_LEAVES.asItem());
 
         getOrCreateTagBuilder(ModTags.Items.WILLOW_LOGS)
@@ -63,6 +59,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.BOATS).add(ModBoats.WILLOW_BOAT);
         getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModBoats.WILLOW_CHEST_BOAT);
-
     }
 }
