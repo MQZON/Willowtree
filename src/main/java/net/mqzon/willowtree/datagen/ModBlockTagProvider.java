@@ -2,7 +2,6 @@ package net.mqzon.willowtree.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.mqzon.willowtree.block.ModBlocks;
@@ -59,19 +58,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.WILLOW_BUTTON);
 
-//        getOrCreateTagBuilder(ModTags.Blocks.WILLOW_SIGNS)
-//                .add(ModBlocks.WILLOW_STANDING_SIGN)
-//                .add(ModBlocks.WILLOW_WALL_SIGN)
-//                .add(ModBlocks.WILLOW_HANGING_SIGN)
-//                .add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
+        getOrCreateTagBuilder(ModTags.Blocks.WILLOW_SIGNS)
+                .add(ModBlocks.WILLOW_STANDING_SIGN)
+                .add(ModBlocks.WILLOW_WALL_SIGN)
+                .add(ModBlocks.WILLOW_HANGING_SIGN)
+                .add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
 
-//        getOrCreateTagBuilder(BlockTags.STANDING_SIGNS).add(ModBlocks.WILLOW_STANDING_SIGN);
-//        getOrCreateTagBuilder(BlockTags.WALL_SIGNS).add(ModBlocks.WILLOW_WALL_SIGN);
-//        getOrCreateTagBuilder(BlockTags.SIGNS).add(ModBlocks.WILLOW_STANDING_SIGN).add(ModBlocks.WILLOW_WALL_SIGN);
-//        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS).add(ModBlocks.WILLOW_HANGING_SIGN);
-//        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS).add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
-//        getOrCreateTagBuilder(BlockTags.ALL_HANGING_SIGNS).add(ModBlocks.WILLOW_HANGING_SIGN).add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
-//        getOrCreateTagBuilder(BlockTags.ALL_SIGNS).addTag(ModTags.Blocks.WILLOW_SIGNS);
+        getOrCreateTagBuilder(BlockTags.STANDING_SIGNS).add(ModBlocks.WILLOW_STANDING_SIGN);
+        getOrCreateTagBuilder(BlockTags.WALL_SIGNS).add(ModBlocks.WILLOW_WALL_SIGN);
+        getOrCreateTagBuilder(BlockTags.SIGNS).add(ModBlocks.WILLOW_STANDING_SIGN).add(ModBlocks.WILLOW_WALL_SIGN);
+        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS).add(ModBlocks.WILLOW_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS).add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.ALL_HANGING_SIGNS).add(ModBlocks.WILLOW_HANGING_SIGN).add(ModBlocks.WILLOW_WALL_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.ALL_SIGNS).addTag(ModTags.Blocks.WILLOW_SIGNS);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).addTag(ModTags.Blocks.WILLOW_LEAVES);
 
@@ -85,7 +84,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WILLOW_DOOR)
                 .add(ModBlocks.WILLOW_TRAPDOOR)
                 .add(ModBlocks.WILLOW_PRESSURE_PLATE)
-                .add(ModBlocks.WILLOW_BUTTON);
-//                .addTag(ModTags.Blocks.WILLOW_SIGNS);
+                .add(ModBlocks.WILLOW_BUTTON)
+                .addTag(ModTags.Blocks.WILLOW_SIGNS);
     }
 }

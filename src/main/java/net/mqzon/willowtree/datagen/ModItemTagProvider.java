@@ -6,6 +6,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.mqzon.willowtree.block.ModBlocks;
 import net.mqzon.willowtree.boat.ModBoats;
+import net.mqzon.willowtree.item.ModItems;
 import net.mqzon.willowtree.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -57,7 +58,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.WILLOW_PRESSURE_PLATE.asItem());
         getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS).add(ModBlocks.WILLOW_BUTTON.asItem());
 
-//        getOrCreateTagBuilder(ItemTags.SIGNS).add(ModItems.WILLOW_SIGN);
+        getOrCreateTagBuilder(ItemTags.SIGNS).add(ModItems.WILLOW_SIGN);
+        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS).add(ModItems.WILLOW_HANGING_SIGN);
 
         getOrCreateTagBuilder(ItemTags.BOATS).add(ModBoats.WILLOW_BOAT);
         getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModBoats.WILLOW_CHEST_BOAT);

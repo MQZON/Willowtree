@@ -1,8 +1,14 @@
 package net.mqzon.willowtree.block;
 
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -86,6 +92,32 @@ public class ModBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_button")))
                     .mapColor(MapColor.TERRACOTTA_WHITE)));
 
+    public static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(Willowtree.MOD_ID, "entity/signs/willow");
+    public static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(Willowtree.MOD_ID, "entity/signs/hanging/willow");
+    public static final Identifier WILLOW_HANGING_GUI_SIGN_TEXTURE = Identifier.of(Willowtree.MOD_ID, "textures/gui/hanging_signs/willow");
+
+    public static final Block WILLOW_STANDING_SIGN = registerBlock("willow_standing_sign",
+            new TerraformSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_standing_sign")))
+                    .mapColor(MapColor.TERRACOTTA_GREEN)));
+    public static final Block WILLOW_WALL_SIGN = registerBlock("willow_wall_sign",
+            new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_wall_sign")))
+                    .mapColor(MapColor.TERRACOTTA_GREEN)));
+    public static final Block WILLOW_HANGING_SIGN = registerBlockWithoutBlockItem("willow_hanging_sign",
+            new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_GUI_SIGN_TEXTURE,
+                    AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_GREEN)
+                            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_hanging_sign")))
+            ));
+    public static final Block WILLOW_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("willow_wall_hanging_sign",
+            new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_GUI_SIGN_TEXTURE,
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_GREEN)
+                            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Willowtree.MOD_ID, "willow_wall_hanging_sign")))
+            ));
+
+    public static final BlockFamily WILLOW_FAMILY = BlockFamilies.register(WILLOW_PLANKS)
+            .sign(WILLOW_STANDING_SIGN, WILLOW_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Willowtree.MOD_ID, name), block);

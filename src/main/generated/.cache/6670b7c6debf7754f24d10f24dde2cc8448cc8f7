@@ -1,14 +1,18 @@
 // 1.21.4	-999999999-01-01T00:00:00	Willowtree/Tags for minecraft:item
+6e29a478efe89125cf473efa468e5fe3ae02a0ed data/minecraft/tags/item/boats.json
 59bcabbfbdc1499f5d9400bbfc5117f97598b1a0 data/minecraft/tags/item/buttons.json
+822d70079c1dc8fd7eee0665f34f3db9713b7853 data/minecraft/tags/item/chest_boats.json
 9d7d264d143d069fd9fd380868c7df4d6592d769 data/minecraft/tags/item/completes_find_tree_tutorial.json
 25e9f1344f84135d9b51c6924aad219cd4bc0929 data/minecraft/tags/item/doors.json
 ca2513fb4bf9d0683631114bd0068ea4595834ed data/minecraft/tags/item/fence_gates.json
 41497985fb67aba29374fedb06aaa6f838428232 data/minecraft/tags/item/fences.json
+d63ac57608598b4ee5d75fa877b01d8b0800b1b6 data/minecraft/tags/item/hanging_signs.json
 6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/item/leaves.json
 1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/item/logs.json
 1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/item/logs_that_burn.json
 55d9d13381cbfac7adf5704107ba15edd217032c data/minecraft/tags/item/planks.json
 6afdbdcc61a77acf614ca413639fa0ebbdabd4f6 data/minecraft/tags/item/saplings.json
+3bf49016c2f3a3f75b62eb3b817121a3c34df168 data/minecraft/tags/item/signs.json
 1633b97f66aab3bb61041e381b0b640d060e9972 data/minecraft/tags/item/slabs.json
 fa151f5785efc19554b8b33c22a071d43adfe1a1 data/minecraft/tags/item/stairs.json
 282e9a854b8d400f68910e2c095b8e12a02b8114 data/minecraft/tags/item/trapdoors.json

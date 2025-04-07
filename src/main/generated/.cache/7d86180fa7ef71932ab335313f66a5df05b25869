@@ -1,5 +1,8 @@
 // 1.21.4	-999999999-01-01T00:00:00	Willowtree/Tags for minecraft:block
+3b511ec6f3c554e98cb3885ffc460baee665bdc8 data/minecraft/tags/block/all_hanging_signs.json
+703c2203f7fb3bda6c4e033f6113937b1098dea7 data/minecraft/tags/block/all_signs.json
 59bcabbfbdc1499f5d9400bbfc5117f97598b1a0 data/minecraft/tags/block/buttons.json
+d63ac57608598b4ee5d75fa877b01d8b0800b1b6 data/minecraft/tags/block/ceiling_hanging_signs.json
 b403d1ba3105d413a86418a1da7706eff656043b data/minecraft/tags/block/completes_find_tree_tutorial.json
 25e9f1344f84135d9b51c6924aad219cd4bc0929 data/minecraft/tags/block/doors.json
 ca2513fb4bf9d0683631114bd0068ea4595834ed data/minecraft/tags/block/fence_gates.json
@@ -8,15 +11,19 @@ f318abc2e11da161516932babf9a7185dfc18756 data/minecraft/tags/block/flower_pots.j
 6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/leaves.json
 1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/block/logs.json
 1adc4d66dc55a11269f2bab77e9e2034c38ab987 data/minecraft/tags/block/logs_that_burn.json
-0386d47972d517646994aba8770a94df6a427ae5 data/minecraft/tags/block/mineable/axe.json
+b9ac45e8e4e45307cbddd999dd85fed6c832bb8d data/minecraft/tags/block/mineable/axe.json
 6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/mineable/hoe.json
 31f3e0967ba5a4768dcf9f1d373a92c133fb3049 data/minecraft/tags/block/overworld_natural_logs.json
 55d9d13381cbfac7adf5704107ba15edd217032c data/minecraft/tags/block/planks.json
 8bc2ea3c0e1d738d835a018da6e3b114660f8cc9 data/minecraft/tags/block/pressure_plates.json
 6f6bea74db8072bf9452e90d1af11213f5b3f009 data/minecraft/tags/block/replaceable_by_trees.json
+683cee15ca2f4a28594c7c93ba1cf087ba94aa6b data/minecraft/tags/block/signs.json
 1633b97f66aab3bb61041e381b0b640d060e9972 data/minecraft/tags/block/slabs.json
 fa151f5785efc19554b8b33c22a071d43adfe1a1 data/minecraft/tags/block/stairs.json
+856651c0510741e4a116b26d09a46bffb2018c36 data/minecraft/tags/block/standing_signs.json
 282e9a854b8d400f68910e2c095b8e12a02b8114 data/minecraft/tags/block/trapdoors.json
+64e312c5e9b793bd269bf527acd8c0e1aa96874b data/minecraft/tags/block/wall_hanging_signs.json
+a744da105e835839dc4ef20510309212f77d0264 data/minecraft/tags/block/wall_signs.json
 59bcabbfbdc1499f5d9400bbfc5117f97598b1a0 data/minecraft/tags/block/wooden_buttons.json
 25e9f1344f84135d9b51c6924aad219cd4bc0929 data/minecraft/tags/block/wooden_doors.json
 41497985fb67aba29374fedb06aaa6f838428232 data/minecraft/tags/block/wooden_fences.json
@@ -26,3 +33,4 @@ fa151f5785efc19554b8b33c22a071d43adfe1a1 data/minecraft/tags/block/wooden_stairs
 282e9a854b8d400f68910e2c095b8e12a02b8114 data/minecraft/tags/block/wooden_trapdoors.json
 aaf6e48e4ed0be7411eca632ceffa86fe45c6b97 data/willowtree/tags/block/willow_leaves.json
 18e9121cc0911a9fc06c005f5aa34a9e37a31f0a data/willowtree/tags/block/willow_logs.json
+4b87e4bbfd7ba6d8301e7d79e4a9b94f5f76f582 data/willowtree/tags/block/willow_signs.json

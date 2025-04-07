@@ -10,6 +10,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.willowtree.block.ModBlocks;
 import net.mqzon.willowtree.boat.ModBoats;
+import net.mqzon.willowtree.item.ModItems;
 import net.mqzon.willowtree.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -41,8 +42,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createTrapdoorRecipe(ModBlocks.WILLOW_TRAPDOOR, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
                 offerPressurePlateRecipe(ModBlocks.WILLOW_PRESSURE_PLATE, ModBlocks.WILLOW_PLANKS);
                 offerShapelessRecipe(ModBlocks.WILLOW_BUTTON, ModBlocks.WILLOW_PLANKS, "wooden_button", 1);
-//                createSignRecipe(ModItems.WILLOW_SIGN, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
-//                offerHangingSignRecipe(ModItems.WILLOW_HANGING_SIGN, ModBlocks.STRIPPED_WILLOW_LOG);
+                createSignRecipe(ModItems.WILLOW_SIGN, WILLOW_PLANKS_INGREDIENT).criterion(HAS_WILLOW_PLANKS, HAS_WILLOW_PLANKS_CRITERION).offerTo(exporter);
+                offerHangingSignRecipe(ModItems.WILLOW_HANGING_SIGN, ModBlocks.STRIPPED_WILLOW_LOG);
                 offerBoatRecipe(ModBoats.WILLOW_BOAT, ModBlocks.WILLOW_PLANKS);
                 offerChestBoatRecipe(ModBoats.WILLOW_CHEST_BOAT, ModBoats.WILLOW_BOAT);
              }

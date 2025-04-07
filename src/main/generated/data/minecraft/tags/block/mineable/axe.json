@@ -9,6 +9,7 @@
     "willowtree:willow_door",
     "willowtree:willow_trapdoor",
     "willowtree:willow_pressure_plate",
-    "willowtree:willow_button"
+    "willowtree:willow_button",
+    "#willowtree:willow_signs"
   ]
 }

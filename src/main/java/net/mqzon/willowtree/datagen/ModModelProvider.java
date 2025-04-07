@@ -42,6 +42,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.WILLOW_TRAPDOOR);
         willowPool.pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE);
         willowPool.button(ModBlocks.WILLOW_BUTTON);
+        willowPool.family(ModBlocks.WILLOW_FAMILY);
+        blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_WILLOW_LOG, ModBlocks.WILLOW_HANGING_SIGN, ModBlocks.WILLOW_WALL_HANGING_SIGN);
     }
 
     @Override

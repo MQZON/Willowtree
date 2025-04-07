@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.willowtree.block.ModBlocks;
+import net.mqzon.willowtree.item.ModItems;
 //import net.mqzon.willowtree.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -40,10 +41,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WILLOW_PRESSURE_PLATE);
         addDrop(ModBlocks.WILLOW_BUTTON);
 
-//        addDrop(ModBlocks.WILLOW_STANDING_SIGN, drops(ModItems.WILLOW_SIGN));
-//        addDrop(ModBlocks.WILLOW_HANGING_SIGN, drops(ModItems.WILLOW_HANGING_SIGN));
-//        addDrop(ModBlocks.WILLOW_WALL_SIGN, drops(ModItems.WILLOW_SIGN));
-//        addDrop(ModBlocks.WILLOW_WALL_HANGING_SIGN, drops(ModItems.WILLOW_HANGING_SIGN));
+        addDrop(ModBlocks.WILLOW_STANDING_SIGN, drops(ModItems.WILLOW_SIGN));
+        addDrop(ModBlocks.WILLOW_HANGING_SIGN, drops(ModItems.WILLOW_HANGING_SIGN));
+        addDrop(ModBlocks.WILLOW_WALL_SIGN, drops(ModItems.WILLOW_SIGN));
+        addDrop(ModBlocks.WILLOW_WALL_HANGING_SIGN, drops(ModItems.WILLOW_HANGING_SIGN));
 
     }
 }

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.mqzon.willowtree.block.ModBlocks;
 import net.mqzon.willowtree.item.ModItemGroups;
+import net.mqzon.willowtree.item.ModItems;
 import net.mqzon.willowtree.world.foliage.ModFoliagePlacerTypes;
 import net.mqzon.willowtree.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -16,7 +17,9 @@ public class Willowtree implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 
 		ModFoliagePlacerTypes.register();
 		ModWorldGeneration.generateModWorldGen();

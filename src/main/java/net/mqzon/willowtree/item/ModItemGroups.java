@@ -35,8 +35,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_TRAPDOOR);
                         entries.add(ModBlocks.WILLOW_PRESSURE_PLATE);
                         entries.add(ModBlocks.WILLOW_BUTTON);
-//                        entries.add(ModItems.WILLOW_SIGN);
-//                        entries.add(ModItems.WILLOW_HANGING_SIGN);
+                        entries.add(ModItems.WILLOW_SIGN);
+                        entries.add(ModItems.WILLOW_HANGING_SIGN);
                         entries.add(ModBoats.WILLOW_BOAT);
                         entries.add(ModBoats.WILLOW_CHEST_BOAT);
                     }).build());
@@ -74,10 +74,10 @@ public class ModItemGroups {
             entries.add(ModBlocks.WILLOW_BUTTON);
         });
 
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-//            entries.add(ModItems.WILLOW_SIGN);
-//            entries.add(ModItems.WILLOW_HANGING_SIGN);
-//        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModItems.WILLOW_SIGN);
+            entries.add(ModItems.WILLOW_HANGING_SIGN);
+        });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(ModBoats.WILLOW_BOAT);
