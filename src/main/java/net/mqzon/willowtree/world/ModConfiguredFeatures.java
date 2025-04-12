@@ -27,7 +27,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, WILLOW, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.WILLOW_LOG),
-                new LargeOakTrunkPlacer(3, 11, 0),
+                new LargeOakTrunkPlacer(12, 3, 0),
                 BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
                 DefaultWillowFoliage(),
                 new TwoLayersFeatureSize(1, 0, 2)
@@ -35,8 +35,7 @@ public class ModConfiguredFeatures {
 
         register(context, WILLOW_BEES_005, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.WILLOW_LOG),
-                new LargeOakTrunkPlacer(3, 11, 0),
-//                new StraightTrunkPlacer(7, 2, 0),
+                new LargeOakTrunkPlacer(12, 3, 0),
                 BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
                 DefaultWillowFoliage(),
                 new TwoLayersFeatureSize(1, 0, 2)

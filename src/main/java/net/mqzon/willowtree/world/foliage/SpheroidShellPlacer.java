@@ -13,7 +13,9 @@ import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static java.lang.Math.*;
 import static net.minecraft.util.math.MathHelper.floor;
@@ -53,11 +55,19 @@ public class SpheroidShellPlacer extends BlobFoliagePlacer {
 
             List<BlockPos> points = new ArrayList<>();
 
+            // Extra placements help connect the leaves to prevent de-spawning.
             if (r > 0.5) points.addAll(makeRing(currentCenter, r-0.5));
+            if (i == 3 || i == 4) {
+                points.addAll(makeRing(currentCenter, 1));
+                points.add(currentCenter);
+            }
             points.addAll(makeRing(currentCenter, r));
-            points.addAll(makeRing(currentCenter, r+0.5));
             points.addAll(makeRing(currentCenter, r+1));
-            points.forEach((point) -> placeFoliageBlock(world, placer, random, config, point));
+
+            // Remove duplicate points before placing foliage blocks.
+            Set<BlockPos> setPoints = new HashSet<>(points);
+            List<BlockPos> distinctPoints = new ArrayList<>(setPoints);
+            distinctPoints.forEach((point) -> placeFoliageBlock(world, placer, random, config, point));
 
             currentCenter.move(Direction.DOWN);
         }
