@@ -12,34 +12,20 @@ import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 import static net.minecraft.util.math.MathHelper.floor;
 
 public class SpheroidShellPlacer extends BlobFoliagePlacer {
 
     public static final MapCodec<SpheroidShellPlacer> CODEC = RecordCodecBuilder.mapCodec(
-//            instance -> fillFoliagePlacerFields(instance)
-//                    .<IntProvider, Float, Float, Float, Float>and(
-//                            instance.group(
-//                                    IntProvider.createValidatingCodec(4, 16).fieldOf("heigbt").forGetter(foliagePlacer -> foliagePlacer.heigbt),
-//                                    Codec.floatRange(0.0F, 1.0F).fieldOf("wide_bottom_layer_hole_chance").forGetter(foliagePlacer -> foliagePlacer.wideBottomLayerHoleChance),
-//                                    Codec.floatRange(0.0F, 1.0F).fieldOf("corner_hole_chance").forGetter(foliagePlacer -> foliagePlacer.wideBottomLayerHoleChance),
-//                                    Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_chance").forGetter(foliagePlacer -> foliagePlacer.hangingLeavesChance),
-//                                    Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_extension_chance").forGetter(foliagePlacer -> foliagePlacer.hangingLeavesExtensionChance)
-//                            )
-//                    )
-//                    .apply(instance, SpheroidShellPlacer::new)
             instance -> createCodec(instance).apply(instance, SpheroidShellPlacer::new)
     );
-//    private final int thickness;
-//    private final float bumpiness;
 
     public SpheroidShellPlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset, height);
-//        this.thickness = thickness;
-//        this.bumpiness = bumpiness;
     }
 
 
@@ -50,45 +36,80 @@ public class SpheroidShellPlacer extends BlobFoliagePlacer {
 
     @Override
     protected void generate(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
-        // start at treenode (top) and work down foliageHeight (or trunkheight?)
-        //semi-major axis is the distance from center/origin to the outer radius
-        //semi-minor acis is the distance from the center/origin to the top
-        // spheroid equation: 1 = (x^2 + z^2)/sMaj + (y^2)/sMin
+        // semi-major axis is the distance from center to the outside (horizontal)
+        // semi-minor axis is the distance from the center to the top (vertical)
+        // spheroid equation: 1 = (x^2 + z^2)/sMaj^2 + (y^2)/sMin^2
 
-        // equation for circle at height y: localR = sqrt((sMaj^2/2)(sMaj^2 - (y^2/sMin^2)))
+        // Equation for radius of circle at height y, relative to bottom of foliage:
+        // r = sqrt((sMaj^2)(1 - (y^2/sMin^2)))
 
-        // value for z given x is +/- sqrt(r^2 - ry^2/sMin - x^2)
-        //y is current height
-        int sMaj = this.radius.getMin(); //radius; // semi-major axis
-        double sMin = this.height; //foliageHeight; // semi-minor axis (this assumes the height is a hemi-spheroid. May want to split out param)
-        BlockPos.Mutable currentCenter = treeNode.getCenter().mutableCopy().move(Direction.UP, (trunkHeight / 2) );
+        double sMaj = this.radius.getMax(); //radius
+        double sMin = this.height; //foliageHeight
+        BlockPos.Mutable currentCenter = treeNode.getCenter().mutableCopy().move(Direction.UP, 2 );
 
-        for (int i = 0; i < this.height; i++) { //start from top? //foliageheight
-            int y = trunkHeight - i; //trunkHeight
-            double r = sqrt(sMaj * sMaj * 0.5 * (1 - ((y * y) / (sMin * sMin))));
-            List<BlockPos> points = makeRing(currentCenter, r);
+        for (int i = 0; i < this.height; i++) { //start from top
+            int y = this.height - i;
+            double r = sqrt(sMaj * sMaj * (1 - ((y * y) / (sMin * sMin))));
+
+            List<BlockPos> points = new ArrayList<>();
+
+            if (r > 0.5) points.addAll(makeRing(currentCenter, r-0.5));
+            points.addAll(makeRing(currentCenter, r));
+            points.addAll(makeRing(currentCenter, r+0.5));
+            points.addAll(makeRing(currentCenter, r+1));
             points.forEach((point) -> placeFoliageBlock(world, placer, random, config, point));
 
             currentCenter.move(Direction.DOWN);
         }
     }
 
-    // Generates positions for a horizontal ring of radius 'r' about center
-    // Iterates over "x" offsets along radius, calculating the corresponding "z" offset.
+    // Generates a list of block positions for a horizontal ring of radius 'r' from center.
+    // Iterates over integer offsets along the radius for one quadrant,
+    // calculating the corresponding "z" offset using pythagoras.
     // Once offsets are determined, they are reused for each quadrant.
+
+    // For visualisation, imagine starting at the top of a circle, where the "x offset" is 0.
+    // Here, x is the "left/right" axis and z is the "forwards/backwards" axis.
+    // We calculate the "z offset", which would initially be equal to r.
+    //                 . -~- .
+    //             . `    |    ` .
+    //            /       |       \
+    //           ||       *       ||
+    //            \               /
+    //             ' .         . '
+    //                ' -._.- '
+    //
+    // Then, increment x offset, each time calculating a new z offset.
+    // The z offset will decrease as the x offset increases.
+    //                 . -~- .
+    //             . `      /  ` .
+    //            /        /      \
+    //           ||       *       ||
+    //            \               /
+    //             ' .         . '
+    //                ' -._.- '
+    //
+    // Eventually we reach the maximum x offset, where the z offset is equal to 0.
+    //                 . -~- .
+    //             . `         ` .
+    //            /               \
+    //           ||       *  -  - ||
+    //            \               /
+    //             ' .         . '
+    //                ' -._.- '
+    // Each calculated offset pair can be inverted in 4 permutations (++, +-, -+, --)
+    // to give you the equivalent positions in all four quadrants.
+
     private List<BlockPos> makeRing(BlockPos center, double r) {
         List<BlockPos> points = Lists.<BlockPos>newArrayList();
-        for (int xOffset = 0; xOffset < r; xOffset ++) {
-            int zOffset = floor(sqrt(r*r - xOffset*xOffset));
+        for (int i = 0; i <= r+1; i ++) {
+            int xOffset = floor(min(i, r));
+            int zOffset = floor(sqrt(r*r - i*i));
 
             BlockPos.Mutable m1 = new BlockPos.Mutable().set(center, xOffset, 0, zOffset);
             BlockPos.Mutable m2 = new BlockPos.Mutable().set(center, xOffset, 0, -zOffset);
             BlockPos.Mutable m3 = new BlockPos.Mutable().set(center, -xOffset, 0, zOffset);
             BlockPos.Mutable m4 = new BlockPos.Mutable().set(center, -xOffset, 0, -zOffset);
-
-            // Apply thickness
-
-            // Apply bumpiness
 
             points.add(m1);
             points.add(m2);

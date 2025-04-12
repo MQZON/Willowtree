@@ -13,12 +13,9 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-//import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.mqzon.willowtree.Willowtree;
 import net.mqzon.willowtree.block.ModBlocks;
 import net.mqzon.willowtree.world.foliage.SpheroidShellPlacer;
-//import net.mqzon.willowtree.world.foliage.WillowFoliagePlacer;
 
 import java.util.List;
 
@@ -39,25 +36,16 @@ public class ModConfiguredFeatures {
         register(context, WILLOW_BEES_005, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.WILLOW_LOG),
                 new LargeOakTrunkPlacer(3, 11, 0),
+//                new StraightTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
                 DefaultWillowFoliage(),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).decorators(List.of(new BeehiveTreeDecorator(0.05F))).build());
     }
 
-//    private static WillowFoliagePlacer DefaultWillowFoliage() {
-//        return new WillowFoliagePlacer(
-//                ConstantIntProvider.create(4),
-//                ConstantIntProvider.create(2),
-//                ConstantIntProvider.create(7),
-//                0.75F,
-//                0.75F,
-//                0F,
-//                0F);
-//    }
 
     private static SpheroidShellPlacer DefaultWillowFoliage() {
-        return new SpheroidShellPlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(0), 6);
+        return new SpheroidShellPlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 6);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
